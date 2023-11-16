@@ -1,0 +1,15 @@
+name: test1
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test1:
+    runs-on: ubuntu-22.04ç
+    steps:
+      - name: test 1
+        run: |
+          echo "Helo test 1"
+          echo "Bye test 1"
