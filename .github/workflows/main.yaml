@@ -12,6 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup ROS environment
+      - name: Setup ROS 2 environment
         uses: ros-tooling/setup-ros@0.7.0
+        with:
+          ros-distro: humble
 
+      - name: Install dependencies 
+        run: |
+          sudo apt-get update
+          rosdep update
+          rosdep install --from-paths src --ignore-src -r -y
+
+      - uses: ros-tooling/action-ros-ci@v0.3
+        with:
+          package-name: ros2_examples
+          target-ros2-distro: humble
+          #vcs-repo-file-url: https://raw.githubusercontent.com/ros2/ros2/humble/ros2.repos
