@@ -7,7 +7,7 @@ on:
 
 jobs:
   test1:
-    runs-on: ubuntu-22.04ç
+    runs-on: ubuntu-22.04
     steps:
       - name: test 1
         run: |
