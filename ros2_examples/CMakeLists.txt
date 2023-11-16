@@ -7,6 +7,18 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+include_directories(include)
+
+add_executable(basic_node src/basic_node.cpp)
+
+ament_target_dependencies(basic_node rclcpp std_msgs)
+
+install(TARGETS 
+  basic_node
+  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
