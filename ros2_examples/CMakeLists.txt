@@ -16,7 +16,7 @@ add_executable(basic_node src/basic_node.cpp)
 
 ament_target_dependencies(basic_node rclcpp std_msgs)
 
-install(TARGETS 
+install(TARGETS
   basic_node
   DESTINATION lib/${PROJECT_NAME})
 

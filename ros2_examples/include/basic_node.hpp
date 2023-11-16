@@ -4,7 +4,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/int32.hpp"
 
-class BasicNode : public rclcpp::Node {
+class BasicNode : public rclcpp::Node
+{
 public:
   BasicNode();
   void step();
