@@ -17,12 +17,6 @@ jobs:
         with:
           ros-distro: humble
 
-      - name: Install dependencies 
-        run: |
-          sudo apt-get update
-          rosdep update
-          rosdep install --from-paths src --ignore-src -r -y
-
       - uses: ros-tooling/action-ros-ci@v0.3
         with:
           package-name: ros2_examples
