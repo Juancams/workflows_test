@@ -2,7 +2,7 @@ name: main
 
 on:
   schedule:
-    - cron: "24 17 * * 6"
+    - cron: "26 18 * * 6"
 
 jobs:
   ROS2:
