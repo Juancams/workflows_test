@@ -46,6 +46,9 @@ jobs:
           sed -i '6a Ultima ejecucion: $(date -u)' README.md && sed -i '7!b; s/.*/&/' README.md
 
       - name: Commit changes
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.INDEX_TOKEN }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
