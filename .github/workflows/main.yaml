@@ -16,34 +16,34 @@ jobs:
         with:
           token: ${{ secrets.WORKFLOW_TEST }}
 
-      - name: Setup ROS 2 environment
-        uses: ros-tooling/setup-ros@0.7.0
-        with:
-          ros-distro: humble
+      # - name: Setup ROS 2 environment
+      #   uses: ros-tooling/setup-ros@0.7.0
+      #   with:
+      #     ros-distro: humble
 
-      - name: Build ROS 2 package
-        uses: ros-tooling/action-ros-ci@v0.3
-        with:
-          package-name: ros2_examples
-          target-ros2-distro: humble
-          #vcs-repo-file-url: https://raw.githubusercontent.com/ros2/ros2/humble/ros2.repos
-          colcon-defaults: |
-            {
-              "build": {
-                "mixin": ["coverage-gcc"]
-              }
-            }
-          colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/1ddb69bedfd1f04c2f000e95452f7c24a4d6176b/index.yaml
+      # - name: Build ROS 2 package
+      #   uses: ros-tooling/action-ros-ci@v0.3
+      #   with:
+      #     package-name: ros2_examples
+      #     target-ros2-distro: humble
+      #     #vcs-repo-file-url: https://raw.githubusercontent.com/ros2/ros2/humble/ros2.repos
+      #     colcon-defaults: |
+      #       {
+      #         "build": {
+      #           "mixin": ["coverage-gcc"]
+      #         }
+      #       }
+      #     colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/1ddb69bedfd1f04c2f000e95452f7c24a4d6176b/index.yaml
 
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.WORKFLOW_TEST }}
+      # - name: Upload coverage reports to Codecov
+      #   uses: codecov/codecov-action@v3
+      #   env:
+      #     CODECOV_TOKEN: ${{ secrets.WORKFLOW_TEST }}
 
       - name: Update README with last execution time
         run: |
           sed -i '7d' README.md
-          sed -i '6a Ultima ejecucion: $(date -u)' README.md && sed -i '7!b; s/.*/&/' README.md
+          sed -i "6a Ultima ejecucion: $(date -u)" README.md && sed -i '7!b; s/.*/&/' README.md
 
       - name: Commit changes
         env:
