@@ -4,7 +4,7 @@
 ![distro](https://img.shields.io/badge/ROS2-Humble-blue)
 [![main](https://github.com/Juancams-Resources/workflows_test/actions/workflows/main.yaml/badge.svg)](https://github.com/Juancams-Resources/workflows_test/actions/workflows/main.yaml)
 [![codecov](https://codecov.io/gh/Juancams-Resources/workflows_test/graph/badge.svg?token=AAZWWXB0IJ)](https://codecov.io/gh/Juancams-Resources/workflows_test)
-Ultima ejecucion:
+Ultima ejecucion: $(date -u)
 
 # Test
 
