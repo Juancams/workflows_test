@@ -43,7 +43,7 @@ jobs:
       - name: Update README with last execution time
         run: |
           sed -i '7d' README.md
-          sed -i "6a Ultima ejecucion: $(date -u)" README.md && sed -i '7!b; s/.*/&/' README.md
+          sed -i "6a ![distro](https://img.shields.io/badge/Last%20CI-$(date -u +"%b %d %Y"))" README.md && sed -i '7!b; s/.*/&/' README.md
 
       - name: Commit changes
         env:
@@ -52,5 +52,5 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md
-          git commit -m "Actualizado README con la última ejecución: $(date -u)"
+          git commit -m "Update README.md" 
           git push
