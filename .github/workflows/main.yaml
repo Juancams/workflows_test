@@ -43,7 +43,7 @@ jobs:
       - name: Update README with last execution time
         run: |
           sed -i '7d' README.md
-          sed -i "6a ![distro](https://img.shields.io/badge/Last%20CI-$(date -u +"%b")-$(date -u +"%d)-$(date -u +"%Y"))" README.md && sed -i '7!b; s/.*/&/' README.md
+          sed -i "6a ![distro](https://img.shields.io/badge/Last%20CI-$(date -u +"%b")-$(date -u +"%d")-$(date -u +"%Y"))" README.md && sed -i '7!b; s/.*/&/' README.md
 
       - name: Commit changes
         env:
