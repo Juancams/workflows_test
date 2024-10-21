@@ -4,7 +4,7 @@
 ![distro](https://img.shields.io/badge/ROS2-Humble-blue)
 [![main](https://github.com/Juancams-Resources/workflows_test/actions/workflows/main.yaml/badge.svg)](https://github.com/Juancams-Resources/workflows_test/actions/workflows/main.yaml)
 [![codecov](https://codecov.io/gh/Juancams-Resources/workflows_test/graph/badge.svg?token=AAZWWXB0IJ)](https://codecov.io/gh/Juancams-Resources/workflows_test)
-![distro](https://img.shields.io/badge/Last%20CI-Oct%2021%202024-blue)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Juancams/1954850ee87f244a87d72d2636d6bfff/raw/test.json)
 
 # Test
 
