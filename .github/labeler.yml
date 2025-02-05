@@ -16,8 +16,6 @@ go2_rviz:
     - 'go2_rviz'
 go2_simulation:
     - 'go2_simulation'
-go2_bringup:
-    - 'go2_bringup'
 go2_tts:
     - 'go2_tts'
 go2_tts_interfaces:
