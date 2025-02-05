@@ -2,9 +2,8 @@ name: Bug Report
 description: File a bug report.
 title: "[Bug]: "
 labels: ["bug"]
-projects: ["octo-org/1", "octo-org/44"]
 assignees:
-  - octocat
+  - Juancams
 body:
   - type: markdown
     attributes:
@@ -16,8 +15,8 @@ body:
       label: Check
       description: Please note that you have reviewed the following:
       options:
-        - label: I have verified that this error has not been reported by another user.
-        - label: I have tried to perform the installation again, following the steps.
+        - label: "I have verified that this error has not been reported by another user."
+        - label: "I have tried to perform the installation again, following the steps."
   - type: dropdown
     id: version
     attributes:
