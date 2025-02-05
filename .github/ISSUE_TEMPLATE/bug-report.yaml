@@ -5,10 +5,6 @@ labels: ["bug"]
 assignees:
   - Juancams
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: checkboxes
     id: pre-check
     attributes:
@@ -40,30 +36,17 @@ body:
       default: 0
     validations:
       required: true
-  - type: dropdown
-    id: package
+  - type: checkboxes
+    id: packages
     attributes:
       label: Package error
       description: Package where I think the error is located
       options:
-        - No idea
-        - go2_bringup
-        - go2_description
-        - go2_driver
-        - go2_hardware
-        - go2_interfaces
-        - go2_navigation
-        - go2_robot
-        - go2_rviz
-        - go2_simulation
-        - go2_tts
-        - go2_tts_interfaces
-        - go2_voxel_map
-        - unitree_api
-        - unitree_go
-      default: 0
-    validations:
-      required: true
+        - label: "go2_bringup | go2_description | go2_driver"
+        - label: "go2_hardware | go2_interfaces | go2_navigation"
+        - label: "go2_robot | go2_rviz | go2_simulation"
+        - label: "go2_tts | go2_tts_interfaces | go2_voxel_map"
+        - label: "unitree_api | unitree_go"
   - type: textarea
     id: what-happened
     attributes:
@@ -97,7 +80,7 @@ body:
     attributes:
       label: Do you propose any way to solve this?
       description: "Please indicate, if you know, how you would solve the bug. If not, leave it blank. Thank you very much!!"
-  - type: textarea
+  - type: input
     id: additional
     attributes:
       label: Anything else you want to add
