@@ -1,30 +1,30 @@
 go2_bringup:
-    - '(go2_bringup|bringup)'
+    - '[x] go2_bringup'
 go2_description:
-    - '(go2_description|description)'
+    - '[x] go2_description'
 go2_driver:
-    - '(go2_driver|driver)'
+    - '[ ] go2_driver'
 go2_hardware:
-    - '(go2_hardware|hardware)'
+    - 'go2_hardware'
 go2_interfaces:
-    - '(go2_interfaces|interfaces)'
+    - 'go2_interfaces'
 go2_navigation:
-    - '(go2_navigation|navigation)'
+    - 'go2_navigation'
 go2_robot:
-    - '(go2_robot|robot)'
+    - 'go2_robot'
 go2_rviz:
-    - '(go2_rviz|rviz)'
+    - 'go2_rviz'
 go2_simulation:
-    - '(go2_simulation|simulation)'
+    - 'go2_simulation'
 go2_bringup:
-    - '(go2_bringup|bringup)'
+    - 'go2_bringup'
 go2_tts:
-    - '(go2_tts|tts)'
+    - 'go2_tts'
 go2_tts_interfaces:
-    - '(go2_tts_interfaces|tts_interfaces)'
+    - 'go2_tts_interfaces'
 go2_voxel_map:
-    - '(go2_voxel_map|voxel_map)'
+    - 'go2_voxel_map'
 unitree_api:
-    - '(unitree_api|api)'
+    - 'unitree_api'
 unitree_go:
-    - '(unitree_go)'
+    - 'unitree_go'
