@@ -1,5 +1,5 @@
 name: Bug Report
-description: File a bug report.
+description: Bug that does not affect normal operation
 labels: ["bug"]
 type: Bug
 assignees:
