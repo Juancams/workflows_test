@@ -10,7 +10,7 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: checkboxes
-    id: check
+    id: pre-check
     attributes:
       label: Check this before filling out
       description: Please note that you have reviewed the following
@@ -18,7 +18,7 @@ body:
         - label: "I have verified that this error has not been reported by another user."
         - label: "I have tried to perform the installation again, following the steps."
   - type: dropdown
-    id: version
+    id: problem
     attributes:
       label: Problem location
       description: Where are you finding the problem or where are you launching the system?
@@ -41,7 +41,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: package
     attributes:
       label: Package error
       description: Package where I think the error is located
