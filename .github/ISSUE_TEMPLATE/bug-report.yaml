@@ -42,20 +42,20 @@ body:
       label: Package error
       description: Package where I think the error is located
       options:
-        label: go2_bringup
-        label: go2_description
-        label: go2_driver
-        label: go2_hardware
-        label: go2_interfaces
-        label: go2_navigation
-        label: go2_robot
-        label: go2_rviz
-        label: go2_simulation
-        label: go2_tts
-        label: go2_tts_interfaces
-        label: go2_voxel_map
-        label: unitree_api
-        label: unitree_go
+        - label: go2_bringup
+        - label: go2_description
+        - label: go2_driver
+        - label: go2_hardware
+        - label: go2_interfaces
+        - label: go2_navigation
+        - label: go2_robot
+        - label: go2_rviz
+        - label: go2_simulation
+        - label: go2_tts
+        - label: go2_tts_interfaces
+        - label: go2_voxel_map
+        - label: unitree_api
+        - label: unitree_go
   - type: textarea
     id: what-happened
     attributes:
