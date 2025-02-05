@@ -15,4 +15,4 @@ jobs:
       with:
         configuration-path: .github/labeler.yml
         enable-versioned-regex: 0
-        repo-token: ${{ WORKFLOW_TEST.token }}
+        repo-token: ${{ secrets.WORKFLOW_TEST }}
