@@ -1,0 +1,52 @@
+name: Label Issues Based on Checkboxes
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  label_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Get Issue Form Data
+        id: issue_body
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || "";
+            const labels = [];
+
+            try {
+              // Convertir el cuerpo del issue a JSON
+              const parsed = JSON.parse(issue.body);
+
+              // Obtener la lista de paquetes seleccionados
+              const selected_packages = parsed.packages || [];
+
+              // Lista de paquetes válidos
+              const package_labels = [
+                "go2_bringup", "go2_description", "go2_driver", "go2_hardware",
+                "go2_interfaces", "go2_navigation", "go2_robot", "go2_rviz",
+                "go2_simulation", "go2_tts", "go2_tts_interfaces", "go2_voxel_map",
+                "unitree_api", "unitree_go"
+              ];
+
+              // Filtrar solo los paquetes que están en la lista de opciones
+              for (const pkg of selected_packages) {
+                if (package_labels.includes(pkg)) {
+                  labels.push(pkg);
+                }
+              }
+
+              // Agregar etiquetas si hay seleccionados
+              if (labels.length > 0) {
+                github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  labels: labels
+                });
+              }
+            } catch (error) {
+              console.log("No se pudo analizar el JSON del issue:", error.message);
+            }
