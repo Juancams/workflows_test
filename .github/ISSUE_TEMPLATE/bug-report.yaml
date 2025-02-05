@@ -36,26 +36,11 @@ body:
       default: 0
     validations:
       required: true
-  - type: checkboxes
+  - type: input
     id: packages
     attributes:
-      label: Package error
-      description: Package where I think the error is located
-      options:
-        - label: go2_bringup
-        - label: go2_description
-        - label: go2_driver
-        - label: go2_hardware
-        - label: go2_interfaces
-        - label: go2_navigation
-        - label: go2_robot
-        - label: go2_rviz
-        - label: go2_simulation
-        - label: go2_tts
-        - label: go2_tts_interfaces
-        - label: go2_voxel_map
-        - label: unitree_api
-        - label: unitree_go
+      label: Packages problem
+      description: Please add go2_package. It will be used to add labels automatically.
   - type: textarea
     id: what-happened
     attributes:
@@ -89,9 +74,3 @@ body:
     attributes:
       label: Do you propose any way to solve this?
       description: "Please indicate, if you know, how you would solve the bug. If not, leave it blank. Thank you very much!!"
-  - type: input
-    id: additional
-    attributes:
-      label: Anything else you want to add
-      description:
-  
