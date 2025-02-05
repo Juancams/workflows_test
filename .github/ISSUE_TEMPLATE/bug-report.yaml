@@ -1,7 +1,7 @@
 name: Bug Report
 description: File a bug report.
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 projects: ["octo-org/1", "octo-org/44"]
 assignees:
   - octocat
@@ -10,14 +10,61 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+  - type: checkboxes
+    id: check
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Check
+      description: Please note that you have reviewed the following:
+      options:
+        - label: I have verified that this error has not been reported by another user.
+        - label: I have tried to perform the installation again, following the steps.
+  - type: dropdown
+    id: version
+    attributes:
+      label: Problem location
+      description: Where are you finding the problem or where are you launching the system?
+      options:
+        - Robot
+        - My Computer
+      default: 0
     validations:
-      required: false
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: ROS 2 Version
+      description: What version of ros 2 are you using?
+      options:
+        - Foxy
+        - Humble
+        - Jazzy
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Package error
+      description: Package where I think the error is located
+      options:
+        - No idea
+        - go2_bringup
+        - go2_description
+        - go2_driver
+        - go2_hardware
+        - go2_interfaces
+        - go2_navigation
+        - go2_robot
+        - go2_rviz
+        - go2_simulation
+        - go2_tts
+        - go2_tts_interfaces
+        - go2_voxel_map
+        - unitree_api
+        - unitree_go
+      default: 0
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
@@ -27,41 +74,12 @@ body:
       value: "A bug happened!"
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
   - type: textarea
     id: repro
     attributes:
@@ -75,3 +93,14 @@ body:
       render: bash
     validations:
       required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Do you propose any way to solve this?
+      description: "Please indicate, if you know, how you would solve the bug. If not, leave it blank. Thank you very much!!"
+  - type: textarea
+    id: additional
+    attributes:
+      label: Anything else you want to add
+      description:
+  
