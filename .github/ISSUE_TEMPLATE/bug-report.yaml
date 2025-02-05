@@ -13,10 +13,10 @@ body:
     id: check
     attributes:
       label: Check
-      description: Please note that you have reviewed the following:
+      description: Please note that you have reviewed the following
       options:
-        - label: "I have verified that this error has not been reported by another user."
-        - label: "I have tried to perform the installation again, following the steps."
+        - label: I have verified that this error has not been reported by another user.
+        - label: I have tried to perform the installation again, following the steps.
   - type: dropdown
     id: version
     attributes:
