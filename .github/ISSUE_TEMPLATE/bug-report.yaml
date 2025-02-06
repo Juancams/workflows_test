@@ -1,6 +1,7 @@
 name: Bug Report
 description: Bug that does not affect normal operation
-labels: ["bug"]
+labels: ["🐞 bug 🐞"]
+title: "[Bug]: "
 type: Bug
 assignees:
   - Juancams
@@ -30,9 +31,9 @@ body:
       label: ROS 2 Version
       description: What version of ros 2 are you using?
       options:
-        - Foxy
-        - Humble
-        - Jazzy
+        - Foxy 🦊
+        - Humble 🐢
+        - Jazzy 🎺
       default: 0
     validations:
       required: true
