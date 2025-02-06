@@ -1,7 +1,5 @@
 name: Bug Report
 description: Bug that does not affect normal operation
-labels: ["🐞 bug 🐞"]
-title: "[Bug]: "
 type: Bug
 assignees:
   - Juancams
