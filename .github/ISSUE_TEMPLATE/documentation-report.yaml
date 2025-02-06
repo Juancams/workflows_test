@@ -14,7 +14,7 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: location
+      label: Where?
       description: Where should I make the change, on the web or in the readme?
       options:
         - Web 🌐
