@@ -1,6 +1,6 @@
 name: Bug Report
 description: Bug that does not affect normal operation
-type: Bug
+type: BUG 🐞
 assignees:
   - Juancams
 body:
