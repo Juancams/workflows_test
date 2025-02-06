@@ -32,3 +32,5 @@ unitree_go:
   - 'Humble 🐢'
 🎺 jazzy 🎺:
   - 'Jazyy 🎺'
+new_package:
+  - '- \[x\] new_package'
