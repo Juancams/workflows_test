@@ -17,7 +17,7 @@ body:
     id: version
     attributes:
       label: ROS 2 Version
-      description: Indicate for which versions this feature is:
+      description: Indicate for which versions this feature is
       options:
         - label: Foxy 🦊
         - label: Humble 🐢
