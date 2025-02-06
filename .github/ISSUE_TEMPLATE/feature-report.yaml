@@ -22,9 +22,6 @@ body:
         - label: Foxy 🦊
         - label: Humble 🐢
         - label: Jazzy 🎺
-      default: 0
-    validations:
-      required: true
   - type: checkboxes
     id: packages
     attributes:
@@ -46,8 +43,6 @@ body:
         - label: unitree_api
         - label: unitree_go
         - label: new_package
-      validations:
-      required: true
   - type: input
     id: new-packages
     attributes:
