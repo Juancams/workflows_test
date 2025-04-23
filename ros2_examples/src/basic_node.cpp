@@ -17,7 +17,7 @@ void BasicNode::step()
   auto msg = std_msgs::msg::Int32();
   msg.data = number_;
   pub_->publish(msg);
-  RCLCPP_INFO(this->get_logger(), "Number: %d", number_);
+  RCLCPP_INFO(this->get_logger(), "Number: %d ---", number_);
 
   number_++;
 }
