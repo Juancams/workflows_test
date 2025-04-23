@@ -16,7 +16,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git clone https://github.com/Juancams/workflows_test.git upstream-repo
+          git clone https://github.com/Juancams-Resources/workflows_test.git upstream-repo
           rm -rf ros2_examples
           cp -r upstream-repo/ros2_examples ros2_examples
           git pull --rebase origin main
