@@ -20,7 +20,7 @@ jobs:
           rm -rf ros2_examples
           cp -r upstream-repo/ros2_examples ros2_examples
           if ! git diff --quiet; then
-            git add carpeta1
+            git add -A
             git commit -m "Sync ros2_examples from upstream"
           fi
 
