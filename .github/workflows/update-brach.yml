@@ -19,6 +19,7 @@ jobs:
           git clone https://github.com/Juancams/workflows_test.git upstream-repo
           rm -rf ros2_examples
           cp -r upstream-repo/ros2_examples ros2_examples
+          git pull --rebase origin main
           if ! git diff --quiet; then
             git add -A
             git commit -m "Sync ros2_examples from upstream"
