@@ -2,7 +2,7 @@ name: update-branch
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/6 * * * *'
 
 jobs:
   sync-folder:
