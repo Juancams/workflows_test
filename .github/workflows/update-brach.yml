@@ -1,0 +1,31 @@
+name: update-branch
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  sync-folder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout fork repository
+        uses: actions/checkout@v4
+          
+      - name: Update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git clone https://github.com/Juancams/workflows_test.git upstream-repo
+          rm -rf ros2_examples
+          cp -r upstream-repo/ros2_examples ros2_examples
+          if ! git diff --quiet; then
+            git add carpeta1
+            git commit -m "Sync ros2_examples from upstream"
+          fi
+
+      - name: Push changes
+        if: success()
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
