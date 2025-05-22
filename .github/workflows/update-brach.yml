@@ -1,9 +1,5 @@
 name: update-branch
 
-on:
-  schedule:
-    - cron: '*/6 * * * *'
-
 jobs:
   sync-folder:
     runs-on: ubuntu-latest
